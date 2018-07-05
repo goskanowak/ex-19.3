@@ -32,7 +32,7 @@ export function comments(state = [], action) {
       return state.comments.filter(comment => {
         if (comment.id === action.id) {
           return Object.assign({}, comment, {
-            votes: action.votes
+            votes: action.votes -1
           });
         } else {
           return comment;
@@ -43,7 +43,7 @@ export function comments(state = [], action) {
       return state.comments.filter(comment => {
         if (comment.id === action.id) {
           return Object.assign({}, comment, {
-            votes: action.votes 
+            votes: action.votes +1
           });
         } else {
           return comment;
