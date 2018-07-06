@@ -15,7 +15,7 @@ export function comments(state = [], action) {
           , ...state.comments];
           
     case REMOVE_COMMENT:
-      return state.comments.filter(comment => comment.id !== action.id) // w metodzie filter przekazujemy callback, który jest wykonywany po każdym el tablicy comments, odsiewa te które nie spełniają warunku tego samego id.
+      return state.comments.filter(comment => comment.id !== action.id);
           
     case EDIT_COMMENT:
       return state.comments.filter(comment => {
@@ -49,4 +49,6 @@ export function comments(state = [], action) {
           return comment;
         }
       });
+      default: 
+        return state;
 };

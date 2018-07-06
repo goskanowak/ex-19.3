@@ -30,14 +30,14 @@ const editComment = function editComment(id) {
 const thumbUpComment = function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
-    id: uuid.v4()
+    id
   }
 };
 
 const thumbDownComment = function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
-    id: uuid.v4()
+    id
   }
 };
     
